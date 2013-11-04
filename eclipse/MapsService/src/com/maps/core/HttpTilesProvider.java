@@ -37,9 +37,6 @@ public class HttpTilesProvider implements TilesProvider {
 		if (zoom > 0)
 			y = max - 1 - y;
 
-		server = "http://tile.openstreetmap.org/";
-		server = "http://otile1.mqcdn.com/tiles/1.0.0/sat/";
-
 		url = new URL(server + zoom + "/" + x + "/" + y + ".png");
 
 		URLConnection conn = url.openConnection();

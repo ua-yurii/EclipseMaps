@@ -27,7 +27,7 @@ public class EclipseMapsService implements IEclipseMapsService {
 	private EclipseMapsProviderFactory factory = new EclipseMapsProviderFactory();
 
 	public EclipseMapsService() {
-		providers.put("http", TiledMapsProvider.byURL("http"));
+	
 	}
 
 	private void loadPreferences() {

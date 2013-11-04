@@ -44,10 +44,19 @@ public class MapViewPart {
 					"MapsPreferencesPlugin").getEntry(
 					"/resources/world.mbtiles"));
 
-			MapsServiceBinder.getService().addProvider(url.getPath());
+			MapsServiceBinder.getService().addProvider(url.toString());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+		// MapsServiceBinder.getService().addProvider(
+		// "http://otile1.mqcdn.com/tiles/1.0.0/sat/");
+
+		// MapsServiceBinder.getService().addProvider(
+		// "http://tile.openstreetmap.org/");
+
+		MapsServiceBinder.getService().addProvider(
+				"http://otile1.mqcdn.com/tiles/1.0.0/osm/");
 
 	}
 

@@ -1,5 +1,8 @@
 package com.eclipsemaps.service;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import com.eclipsemaps.service.export.IEclipseMapsProvider;
 import com.maps.core.HttpTilesProvider;
 import com.maps.core.MBTilesProvider;
@@ -12,11 +15,26 @@ public class TiledMapsProvider implements IEclipseMapsProvider {
 	static TiledMapsProvider byURL(String url) {
 		TiledMapsProvider provider = new TiledMapsProvider();
 		provider.url = url;
-		if (url.length() > 10)
-			provider.tilesProvider = new MBTilesProvider(url);
-		else
+
+		URL tmp = null;
+
+		try {
+			tmp = new URL(url);
+		} catch (MalformedURLException e) {
+			return null;
+		}
+
+		if (tmp.getProtocol().equals("http")) {
 			provider.tilesProvider = new HttpTilesProvider(url);
-		return provider;
+			return provider;
+		}
+
+		if (tmp.getProtocol().equals("file")) {
+			provider.tilesProvider = new MBTilesProvider(tmp.getPath());
+			return provider;
+		}
+		provider = null;
+		return null;
 	}
 
 	public String getUrl() {

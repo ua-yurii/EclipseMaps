@@ -5,10 +5,16 @@
       <children xsi:type="advanced:Perspective" xmi:id="_F3ttIESJEeOJlaZK58yaVA" elementId="eclipsemapsapplication.perspective.0">
         <children xsi:type="basic:PartSashContainer" xmi:id="_Rc_KEEUsEeOLWMowSdOUwQ" elementId="eclipsemapsapplication.partsashcontainer.1">
           <children xsi:type="basic:PartSashContainer" xmi:id="_1aJHcESIEeOJlaZK58yaVA" elementId="eclipsemapsapplication.partsashcontainer.0" containerData="8000" horizontal="true">
-            <children xsi:type="basic:PartStack" xmi:id="_5KlTMESIEeOJlaZK58yaVA" elementId="eclipsemapsapplication.partstack.center" containerData="6000"/>
-            <children xsi:type="basic:PartStack" xmi:id="_xWCjYESJEeOJlaZK58yaVA" elementId="eclipsemapsapplication.partstack.left" containerData="2000"/>
+            <children xsi:type="basic:PartStack" xmi:id="_5KlTMESIEeOJlaZK58yaVA" elementId="eclipsemapsapplication.partstack.center" containerData="6000">
+              <tags>NoAutoCollapse</tags>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_xWCjYESJEeOJlaZK58yaVA" elementId="eclipsemapsapplication.partstack.left" containerData="2000">
+              <tags>NoAutoCollapse</tags>
+            </children>
           </children>
-          <children xsi:type="basic:PartStack" xmi:id="_S5-sgEUsEeOLWMowSdOUwQ" elementId="eclipsemapsapplication.partstack.bottom" containerData="2000"/>
+          <children xsi:type="basic:PartStack" xmi:id="_S5-sgEUsEeOLWMowSdOUwQ" elementId="eclipsemapsapplication.partstack.bottom" containerData="2000">
+            <tags>NoAutoCollapse</tags>
+          </children>
         </children>
       </children>
     </children>
