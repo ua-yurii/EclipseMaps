@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="MapsPreferencesPlugin">
+   <implementation class="com.eclipsemaps.MapsServiceBinder"/>
+   <reference bind="setService" cardinality="1..1" interface="com.eclipsemaps.service.export.IEclipseMapsService" name="IEclipseMapsService" policy="static" unbind="unsetService"/>
+</scr:component>
