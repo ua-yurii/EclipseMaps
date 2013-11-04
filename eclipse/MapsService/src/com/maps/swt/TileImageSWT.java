@@ -44,4 +44,9 @@ public class TileImageSWT implements TileImage {
 		this.type = type;
 	}
 
+	@Override
+	public void dispose() {
+		image.dispose();
+	}
+
 }

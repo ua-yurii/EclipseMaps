@@ -6,23 +6,24 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.HashMap;
 
 import com.eclipsemaps.export.Bounds;
 
-public class MBTilesProvider implements TilesProvider {
-	private HashMap<Tile, TileImage> map;
+public class MBTilesProvider extends AbstactCachingTilesProvider {
+	private static final int CACHE_SIZE = 16;
+	
 	private Connection connection = null;
 	private String fileName = null;
 	private Bounds bounds = null;
 
 	public MBTilesProvider(String fileName) {
+		super(CACHE_SIZE);
 		this.fileName = fileName;
-		map = new HashMap<Tile, TileImage>();
 	}
 
 	@Override
 	public void open() {
+		super.open();
 		try {
 			Class.forName("org.sqlite.JDBC");
 		} catch (ClassNotFoundException e) {
@@ -43,6 +44,7 @@ public class MBTilesProvider implements TilesProvider {
 
 	@Override
 	public void close() {
+		super.close();
 		try {
 			connection.close();
 		} catch (SQLException e) {
@@ -110,24 +112,24 @@ public class MBTilesProvider implements TilesProvider {
 	@Override
 	public TileImage requestTileImage(Tile tile, TileImageFactory factory,
 			TileImageListener listener) {
-		
+
 		assert factory == null;
-		
-		TileImage img = map.get(tile);
+
+		TileImage img = get(tile);
 		if (img == null) {
 			byte[] data = getTile(tile.zoom, tile.x, tile.y);
 			if (data != null) {
 				ByteArrayInputStream bis = new ByteArrayInputStream(data);
 				img = factory.getTileImage(bis);
-				map.put(tile, img);
+				put(tile, img);
 				return img;
-			}else{
+			} else {
 				img = factory.getTileImage(TileImage.TYPE_NOIMAGE);
-				map.put(tile, img);
+				put(tile, img);
 				return img;
 			}
 		}
-		
+
 		return img;
 	}
 }

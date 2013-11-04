@@ -6,23 +6,13 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.HashMap;
 
-public class HttpTilesProvider implements TilesProvider {
-	private HashMap<Tile, TileImage> map;
+public class HttpTilesProvider extends AbstactCachingTilesProvider {
+	private static final int CACHE_SIZE = 64;
 	private String server;
 
 	public HttpTilesProvider(String url) {
+		super(CACHE_SIZE);
 		this.server = url;
-		map = new HashMap<Tile, TileImage>();
-	}
-
-	@Override
-	public void open() {
-
-	}
-
-	@Override
-	public void close() {
-
 	}
 
 	private InputStream getTile(int zoom, int x, int y) throws IOException {
@@ -81,7 +71,7 @@ public class HttpTilesProvider implements TilesProvider {
 				}
 
 				img.setType(TileImage.TYPE_LOADED);
-				map.put(tile, img);
+				put(tile, img);
 
 				if (listener != null) {
 					listener.tileImageReady(tile, img);
@@ -103,7 +93,7 @@ public class HttpTilesProvider implements TilesProvider {
 			TileImageListener listener) {
 		assert factory == null;
 
-		TileImage img = map.get(tile);
+		TileImage img = get(tile);
 
 		if (img == null) {
 			if (!requests.containsKey(tile)) {

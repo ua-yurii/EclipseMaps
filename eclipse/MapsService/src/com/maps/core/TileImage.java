@@ -10,4 +10,6 @@ public interface TileImage {
 
 	void setType(int typeCached);
 
+	void dispose();
+
 }
