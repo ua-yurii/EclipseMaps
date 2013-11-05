@@ -3,16 +3,16 @@
   <children xsi:type="basic:TrimmedWindow" xmi:id="_tipfMURmEeO1adLt3kI7LA" label="EclipseMapsApplication" x="200" y="100" width="640" height="480">
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_FD0LAESJEeOJlaZK58yaVA" elementId="eclipsemapsapplication.perspectivestack.0">
       <children xsi:type="advanced:Perspective" xmi:id="_F3ttIESJEeOJlaZK58yaVA" elementId="eclipsemapsapplication.perspective.0">
-        <children xsi:type="basic:PartSashContainer" xmi:id="_Rc_KEEUsEeOLWMowSdOUwQ" elementId="eclipsemapsapplication.partsashcontainer.1">
-          <children xsi:type="basic:PartSashContainer" xmi:id="_1aJHcESIEeOJlaZK58yaVA" elementId="eclipsemapsapplication.partsashcontainer.0" containerData="8000" horizontal="true">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_Rc_KEEUsEeOLWMowSdOUwQ" elementId="eclipsemapsapplication.partsashcontainer.1" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_1aJHcESIEeOJlaZK58yaVA" elementId="eclipsemapsapplication.partsashcontainer.0" containerData="8000">
             <children xsi:type="basic:PartStack" xmi:id="_5KlTMESIEeOJlaZK58yaVA" elementId="eclipsemapsapplication.partstack.center" containerData="6000">
               <tags>NoAutoCollapse</tags>
             </children>
-            <children xsi:type="basic:PartStack" xmi:id="_xWCjYESJEeOJlaZK58yaVA" elementId="eclipsemapsapplication.partstack.left" containerData="2000">
+            <children xsi:type="basic:PartStack" xmi:id="_S5-sgEUsEeOLWMowSdOUwQ" elementId="eclipsemapsapplication.partstack.bottom" containerData="2000">
               <tags>NoAutoCollapse</tags>
             </children>
           </children>
-          <children xsi:type="basic:PartStack" xmi:id="_S5-sgEUsEeOLWMowSdOUwQ" elementId="eclipsemapsapplication.partstack.bottom" containerData="2000">
+          <children xsi:type="basic:PartStack" xmi:id="_xWCjYESJEeOJlaZK58yaVA" elementId="eclipsemapsapplication.partstack.left" containerData="2000">
             <tags>NoAutoCollapse</tags>
           </children>
         </children>
