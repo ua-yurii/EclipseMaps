@@ -3,8 +3,8 @@
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_6IrLwESLEeOJlaZK58yaVA" featurename="children" parentElementId="eclipsemapsapplication.partstack.center">
     <elements xsi:type="basic:Part" xmi:id="_fKPZ8ESMEeOJlaZK58yaVA" elementId="mapspreferencesplugin.part.mapviewpart" contributionURI="bundleclass://MapsUIPlugin/com.eclipsemaps.parts.MapViewPart" label="Map View" closeable="true">
       <toolbar xmi:id="_jLzx8ESMEeOJlaZK58yaVA" elementId="mapspreferencesplugin.toolbar.0">
-        <children xsi:type="menu:DirectToolItem" xmi:id="_g3g7IEXsEeOq0q9fj5OskQ" elementId="mapspreferencesplugin.directtoolitem.0" label="" iconURI="platform:/plugin/MapsUIPlugin/resources/icons/zoom-in.png"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_IdhygEYuEeOn_psXewkIGQ" elementId="mapsuiplugin.directtoolitem.1" iconURI="platform:/plugin/MapsUIPlugin/resources/icons/zoom-out.png"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_g3g7IEXsEeOq0q9fj5OskQ" elementId="mapspreferencesplugin.directtoolitem.0" label="" iconURI="platform:/plugin/MapsUIPlugin/resources/icons/zoom-in.png" contributionURI="bundleclass://MapsUIPlugin/com.eclipsemaps.handlers.ZoomInHandler"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_IdhygEYuEeOn_psXewkIGQ" elementId="mapsuiplugin.directtoolitem.1" iconURI="platform:/plugin/MapsUIPlugin/resources/icons/zoom-out.png" contributionURI="bundleclass://MapsUIPlugin/com.eclipsemaps.handlers.ZoomOutHandler"/>
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_CPcfoEYuEeOn_psXewkIGQ" elementId="mapsuiplugin.toolbarseparator.0"/>
         <children xsi:type="menu:DirectToolItem" xmi:id="_C0RrAEYuEeOn_psXewkIGQ" elementId="mapsuiplugin.directtoolitem.0" iconURI="platform:/plugin/MapsUIPlugin/resources/icons/zoom-original.png"/>
       </toolbar>

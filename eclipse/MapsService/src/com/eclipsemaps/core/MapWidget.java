@@ -58,6 +58,7 @@ public class MapWidget extends Canvas implements IMapWidget {
 	public void setZoom(int zoom) {
 		this.zoom = zoom;
 		drawer.setZoom(zoom);
+		redraw();
 	}
 
 	@Override
@@ -65,6 +66,7 @@ public class MapWidget extends Canvas implements IMapWidget {
 		this.lon = center.getLontitude();
 		this.lat = center.getLantitude();
 		drawer.setCenter(center);
+		redraw();
 	}
 
 	public void setProvider(final TilesProvider provider) {

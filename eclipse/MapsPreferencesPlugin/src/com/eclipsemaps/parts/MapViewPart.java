@@ -19,7 +19,8 @@ import com.eclipsemaps.export.IMapWidget;
 import com.mapslibrary.GeoPoint;
 
 public class MapViewPart {
-	IMapWidget mapWidget;
+	private IMapWidget mapWidget;
+	private int zoom = 3;
 
 	@Inject
 	public MapViewPart() {
@@ -30,7 +31,7 @@ public class MapViewPart {
 	public void postConstruct(Composite parent) {
 		parent.setLayout(new FillLayout());
 		mapWidget = MapsServiceBinder.getService().createWidget(parent);
-		mapWidget.setZoom(3);
+		mapWidget.setZoom(zoom);
 
 		float lon = 30.0f;
 		float lat = 50.0f;
@@ -40,9 +41,8 @@ public class MapViewPart {
 		try {
 			URL url = null;
 
-			url = FileLocator.toFileURL(Platform.getBundle(
-					"MapsUIPlugin").getEntry(
-					"/resources/world.mbtiles"));
+			url = FileLocator.toFileURL(Platform.getBundle("MapsUIPlugin")
+					.getEntry("/resources/world.mbtiles"));
 
 			MapsServiceBinder.getService().addProvider(url.toString());
 		} catch (IOException e) {
@@ -73,6 +73,24 @@ public class MapViewPart {
 	@Persist
 	public void save() {
 		// TODO Your code here
+	}
+	
+	public void zoomIn() {
+		int tmp = zoom;
+		tmp++;
+		if (tmp > 16)
+			tmp = 16;
+		zoom = tmp;
+		mapWidget.setZoom(zoom);
+	}
+
+	public void zoomOut() {
+		int tmp = zoom;
+		tmp--;
+		if (tmp < 1)
+			tmp = 1;
+		zoom = tmp;
+		mapWidget.setZoom(zoom);
 	}
 
 }
