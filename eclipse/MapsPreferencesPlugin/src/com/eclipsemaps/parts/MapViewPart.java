@@ -15,8 +15,8 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 
 import com.eclipsemaps.MapsServiceBinder;
-import com.eclipsemaps.export.GeoPoint;
 import com.eclipsemaps.export.IMapWidget;
+import com.mapslibrary.GeoPoint;
 
 public class MapViewPart {
 	IMapWidget mapWidget;
@@ -41,7 +41,7 @@ public class MapViewPart {
 			URL url = null;
 
 			url = FileLocator.toFileURL(Platform.getBundle(
-					"MapsPreferencesPlugin").getEntry(
+					"MapsUIPlugin").getEntry(
 					"/resources/world.mbtiles"));
 
 			MapsServiceBinder.getService().addProvider(url.toString());

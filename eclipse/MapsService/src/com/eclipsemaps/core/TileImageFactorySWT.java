@@ -1,4 +1,4 @@
-package com.maps.swt;
+package com.eclipsemaps.core;
 
 import java.io.InputStream;
 
@@ -6,8 +6,8 @@ import org.eclipse.swt.graphics.Device;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.Rectangle;
 
-import com.maps.core.TileImage;
-import com.maps.core.TileImageFactory;
+import com.mapslibrary.core.TileImage;
+import com.mapslibrary.core.TileImageFactory;
 
 public class TileImageFactorySWT implements TileImageFactory {
 	private Device device;

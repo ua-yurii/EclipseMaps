@@ -16,6 +16,6 @@ public interface IEclipseMapsService {
 	public void registerListener(IEclipseMapsServiceListener listener);
 
 	public void deregisterListener(IEclipseMapsServiceListener listener);
-	
+
 	public IMapWidget createWidget(Composite parent);
 }

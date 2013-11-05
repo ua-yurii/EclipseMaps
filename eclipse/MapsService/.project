@@ -30,4 +30,11 @@
 		<nature>org.eclipse.pde.PluginNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>jml.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/JavaMapsLibrary/bin/jml.jar</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -10,16 +10,16 @@ import org.eclipse.swt.widgets.Composite;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.prefs.Preferences;
 
+import com.eclipsemaps.core.MapWidget;
 import com.eclipsemaps.export.IMapWidget;
 import com.eclipsemaps.service.export.IEclipseMapsProvider;
 import com.eclipsemaps.service.export.IEclipseMapsService;
 import com.eclipsemaps.service.export.IEclipseMapsServiceListener;
-import com.maps.core.Tile;
-import com.maps.core.TileImage;
-import com.maps.core.TileImageFactory;
-import com.maps.core.TileImageListener;
-import com.maps.core.TilesProvider;
-import com.maps.swt.MapWidget;
+import com.mapslibrary.core.Tile;
+import com.mapslibrary.core.TileImage;
+import com.mapslibrary.core.TilesProvider;
+import com.mapslibrary.core.TileImageFactory;
+import com.mapslibrary.core.TileImageListener;
 
 public class EclipseMapsService implements IEclipseMapsService {
 	private LinkedHashMap<String, IEclipseMapsProvider> providers = new LinkedHashMap<>();

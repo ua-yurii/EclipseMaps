@@ -1,4 +1,4 @@
-package com.maps.swt;
+package com.eclipsemaps.core;
 
 import java.io.InputStream;
 
@@ -6,7 +6,7 @@ import org.eclipse.swt.graphics.Device;
 import org.eclipse.swt.graphics.GC;
 import org.eclipse.swt.graphics.Image;
 
-import com.maps.core.TileImage;
+import com.mapslibrary.core.TileImage;
 
 public class TileImageSWT implements TileImage {
 	private Image image;

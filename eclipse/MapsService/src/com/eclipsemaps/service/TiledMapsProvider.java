@@ -4,9 +4,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import com.eclipsemaps.service.export.IEclipseMapsProvider;
-import com.maps.core.HttpTilesProvider;
-import com.maps.core.MBTilesProvider;
-import com.maps.core.TilesProvider;
+import com.mapslibrary.core.HttpTilesProvider;
+import com.mapslibrary.core.MBTilesProvider;
+import com.mapslibrary.core.TilesProvider;
 
 public class TiledMapsProvider implements IEclipseMapsProvider {
 	private String url;

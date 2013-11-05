@@ -1,4 +1,4 @@
-package com.maps.swt;
+package com.eclipsemaps.core;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseEvent;
@@ -11,12 +11,12 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Canvas;
 import org.eclipse.swt.widgets.Composite;
 
-import com.eclipsemaps.export.GeoPoint;
+import com.eclipsemaps.core.TileImageFactorySWT;
+import com.eclipsemaps.core.TiledLayerSWT;
 import com.eclipsemaps.export.IMapWidget;
-import com.eclipsemaps.export.Utils;
-import com.maps.core.TilesProvider;
-import com.maps.swt.TileImageFactorySWT;
-import com.maps.swt.TiledLayerSWT;
+import com.mapslibrary.GeoPoint;
+import com.mapslibrary.Utils;
+import com.mapslibrary.core.TilesProvider;
 
 public class MapWidget extends Canvas implements IMapWidget {
 	private TiledLayerSWT drawer;

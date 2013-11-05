@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="ASCII"?>
-<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmi:id="_5PbPkESLEeOJlaZK58yaVA">
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_5PbPkESLEeOJlaZK58yaVA">
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_6IrLwESLEeOJlaZK58yaVA" featurename="children" parentElementId="eclipsemapsapplication.partstack.center">
-    <elements xsi:type="basic:Part" xmi:id="_fKPZ8ESMEeOJlaZK58yaVA" elementId="mapspreferencesplugin.part.mapviewpart" contributionURI="bundleclass://MapsPreferencesPlugin/com.eclipsemaps.parts.MapViewPart" label="Map View">
-      <toolbar xmi:id="_jLzx8ESMEeOJlaZK58yaVA" elementId="mapspreferencesplugin.toolbar.0"/>
+    <elements xsi:type="basic:Part" xmi:id="_fKPZ8ESMEeOJlaZK58yaVA" elementId="mapspreferencesplugin.part.mapviewpart" contributionURI="bundleclass://MapsUIPlugin/com.eclipsemaps.parts.MapViewPart" label="Map View" closeable="true">
+      <toolbar xmi:id="_jLzx8ESMEeOJlaZK58yaVA" elementId="mapspreferencesplugin.toolbar.0">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_g3g7IEXsEeOq0q9fj5OskQ" elementId="mapspreferencesplugin.directtoolitem.0" label="" iconURI="platform:/plugin/MapsUIPlugin/resources/icons/zoom-in.png"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_IdhygEYuEeOn_psXewkIGQ" elementId="mapsuiplugin.directtoolitem.1" iconURI="platform:/plugin/MapsUIPlugin/resources/icons/zoom-out.png"/>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_CPcfoEYuEeOn_psXewkIGQ" elementId="mapsuiplugin.toolbarseparator.0"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_C0RrAEYuEeOn_psXewkIGQ" elementId="mapsuiplugin.directtoolitem.0" iconURI="platform:/plugin/MapsUIPlugin/resources/icons/zoom-original.png"/>
+      </toolbar>
     </elements>
   </fragments>
 </fragment:ModelFragments>

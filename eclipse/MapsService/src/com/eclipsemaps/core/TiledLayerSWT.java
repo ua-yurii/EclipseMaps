@@ -1,27 +1,29 @@
-package com.maps.swt;
+package com.eclipsemaps.core;
+
 
 import java.awt.Point;
 
 import org.eclipse.swt.graphics.GC;
 import org.eclipse.swt.widgets.Canvas;
 
-import com.eclipsemaps.export.Utils;
-import com.maps.core.Tile;
-import com.maps.core.TileImage;
-import com.maps.core.TileImageFactory;
-import com.maps.core.TileImageListener;
-import com.maps.core.TiledLayer;
+import com.mapslibrary.Utils;
+import com.mapslibrary.core.Tile;
+import com.mapslibrary.core.TileImage;
+import com.mapslibrary.core.TileImageFactory;
+import com.mapslibrary.core.TileImageListener;
+import com.mapslibrary.core.TiledLayer;
 
 public class TiledLayerSWT extends TiledLayer {
+	private Canvas canvas;
 
 	protected TiledLayerSWT(Canvas canvas) {
-		super(canvas);
+		this.canvas = canvas;
 	}
 
 	private Runnable updater = new Runnable() {
 		@Override
 		public void run() {
-			getCanvas().redraw();
+			canvas.redraw();
 		}
 	};
 
@@ -29,7 +31,7 @@ public class TiledLayerSWT extends TiledLayer {
 
 		@Override
 		public void tileImageReady(Tile tile, TileImage image) {
-			getCanvas().getDisplay().syncExec(updater);
+			canvas.getDisplay().syncExec(updater);
 		}
 
 		@Override
