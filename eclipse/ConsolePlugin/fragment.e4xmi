@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_FwAisEY2EeOn_psXewkIGQ">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_KSYhsEY2EeOn_psXewkIGQ" featurename="children" parentElementId="eclipsemapsapplication.partstack.bottom">
+    <elements xsi:type="basic:Part" xmi:id="_V0AKwEY2EeOn_psXewkIGQ" elementId="consoleplugin.part.0" contributionURI="bundleclass://ConsolePlugin/com.consoleplugin.ConsolePart" label="Console" iconURI="platform:/plugin/ConsolePlugin/icons/console_view.gif">
+      <toolbar xmi:id="_-34lkEY7EeO1ob3gkxn4zg" elementId="consoleplugin.toolbar.0">
+        <children xsi:type="menu:DirectToolItem" xmi:id="__gsSAEY7EeO1ob3gkxn4zg" elementId="consoleplugin.directtoolitem.0" iconURI="platform:/plugin/ConsolePlugin/icons/clear_co.gif" tooltip="Clear console" contributionURI="bundleclass://ConsolePlugin/com.consoleplugin.handlers.ClearConsoleHandler"/>
+      </toolbar>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>
